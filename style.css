@@ -2,7 +2,7 @@
 html {
     height: 100%;
     width: 100%;
-    background-color: #fffffe;
+    background-color: #f2f7f5;
     color: #004643;
 }
   
@@ -14,7 +14,7 @@ html {
   
 /*Style Page Content*/
 .content {
-    margin-top: 60px;
+    margin-top: 80px;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
@@ -22,25 +22,25 @@ html {
   
 /*Style H1 Text (Page Headers)*/
 h1 {
-    color: #66AB97;
+    color: #00473e;
     font-family: "Schibsted Grotesk", sans-serif;
 }
 
 /*Style H2 Text (Section Subheaders)*/
 h2 {
-    color: #66AB97;
+    color: #00473e;
     font-family: "Schibsted Grotesk", sans-serif;
 }
 
 /*Style H3 Text (Section Subheaders)*/
 h3 {
-    color: #66AB97;
+    color: #00473e;
     font-family: "Schibsted Grotesk", sans-serif;
 }
   
 /*Style Paragraph Text*/
 p {
-    color: #004643;
+    color: #00332c;
     font-family: "Schibsted Grotesk", sans-serif;
 }
   
@@ -50,7 +50,7 @@ ul {
 }
   
 li {
-    color: #004643;
+    color: #00332c;
     font-family: "Schibsted Grotesk", sans-serif;
 }
   
@@ -58,35 +58,43 @@ li {
 .paragraphHeader {
     font-weight: bold;
     font-style: normal;
-    color: #004643;;
+    color: #00473E;;
 }
   
 /*Style Links*/
 a {
-    color: #66AB97;
+    color: #fa5246;
 }
 
 /*Style Links on Hover*/
 a:hover {
-    color: #467F6F;
+    color: #F61606;
 }
   
 /*Style Nav Bar*/
 .navBar {
     position: fixed;
     overflow: hidden;
-    background-color: #004643;
+    background-color: #f2f7f5;
     top: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    border-bottom: 0.5px solid #00473e;
 }
   
 /*Style Nav Bar Links*/
 .navBar a {
     float: left;
     display: block;
-    color: #ffffff;
-    background-color: #004643;
+    color: #00473e;
+    background-color: #f2f7f5;
     text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px 10px;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -96,13 +104,15 @@ a:hover {
 /*Style Nav Bar Icon*/
 .navBar .icon {
     display: none; 
-    background-color: #004643;
-    color: #ffffff;
+    background-color: #f2f7f5;
+    color: #00473e;
 }
   
 /*Style Nav Bar to be Responsive*/
 @media screen and (max-width: 600px) {
-    .navBar a:not(:first-child) {display: none;}
+    .navBar a:not(:first-child) {
+        display: none;
+    }
 
     .navBar a.icon {
         float: right;
@@ -111,7 +121,9 @@ a:hover {
 }
   
 @media screen and (max-width: 600px) {
-    .navBar.responsive {position: sticky;}
+    .navBar.responsive {
+        position: sticky;
+    }
 
     .navBar.responsive .icon {
         position: absolute;
@@ -127,14 +139,15 @@ a:hover {
 }
   
 /*Remove Margin Between Nav Bar and First Image*/
-@media screen and (max-width: 1275px) {
+@media screen and (max-width: 600px) {
     .navBar {
         margin-bottom: -45px;
+        display: block;
     }
 
     #home {
-        background-color: #004643;
-        color: #ffffff;
+        background-color: #f2f7f5;
+        color: #00473e;
     }
 }
   
@@ -152,7 +165,7 @@ a:hover {
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: #66AB97;
+    background-color: #FA5246;
     transform-origin: bottom center;
     transition: transform 0.25s ease-out;
 }
@@ -167,7 +180,7 @@ a:hover {
     border-radius: 50%;
     width: 45%;
     height: auto;
-    border: 10px solid #004643;
+    border: 8px solid #fa5246;
     margin-right: auto;
     margin-left: auto;
     display: block;
@@ -193,7 +206,7 @@ a:hover {
   
 /*Style Scroll Div*/
 .scrollDiv {
-    background-color: #66AB97;
+    background-color: #00473E;
     border-radius: 20px;
     max-height: 500px;
     max-width: 500px;
@@ -211,7 +224,7 @@ a:hover {
   
 /*Style Scroll Div Paragraph Text*/
 .scrollDiv p {
-    color: #ffffff;
+    color: #f2f7f5;
     text-align: center;
     font-family: "Schibsted Grotesk", sans-serif;
     margin-right: 5%;
@@ -332,4 +345,35 @@ a:hover {
         display: block;
         text-align: center;
     }
+}
+
+/*Footer*/
+.footer {
+    width: 100%;
+    margin: 0px;
+    padding: 20px 0px;
+    text-align: center;
+    bottom: 0;
+}
+
+/*Footer Copyright Text*/
+.footer p {
+    color: #00332c;
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-weight: 500;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+/*Footer Social Media Logos/Links*/
+.footer i {
+    font-size: 30px; 
+    color: #00473E;
+    margin: 0px 10px;
+}
+
+.footer i:hover {
+    font-size: 30px; 
+    color: #FA5246;
 }
