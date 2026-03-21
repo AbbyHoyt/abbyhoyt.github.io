@@ -20,22 +20,11 @@ html {
     margin-left: auto;
 }
   
-/*Style H1 Text (Page Headers)*/
-h1 {
+/*Style Header Text*/
+h1, h2, h3 {
     color: #00473e;
     font-family: "Schibsted Grotesk", sans-serif;
-}
-
-/*Style H2 Text (Section Subheaders)*/
-h2 {
-    color: #00473e;
-    font-family: "Schibsted Grotesk", sans-serif;
-}
-
-/*Style H3 Text (Section Subheaders)*/
-h3 {
-    color: #00473e;
-    font-family: "Schibsted Grotesk", sans-serif;
+    margin-bottom: 10px;
 }
   
 /*Style Paragraph Text*/
@@ -58,7 +47,7 @@ li {
 .paragraphHeader {
     font-weight: bold;
     font-style: normal;
-    color: #00473E;;
+    color: #00473E;
 }
   
 /*Style Links*/
@@ -83,6 +72,7 @@ a:hover {
     align-items: center;
     padding: 10px 0px;
     border-bottom: 0.5px solid #00473e;
+    z-index: 1;
 }
   
 /*Style Nav Bar Links*/
@@ -180,10 +170,11 @@ a:hover {
     border-radius: 50%;
     width: 45%;
     height: auto;
-    border: 8px solid #fa5246;
+    border: 5px solid #fa5246;
     margin-right: auto;
     margin-left: auto;
     display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
   
 /*Style Image Gallery Flex Box*/
@@ -198,25 +189,39 @@ a:hover {
   
 /*Style Image Gallery Images*/
 .galleryImage {
-    margin: 10px 10px;
+    margin: 10px;
     height: 175px;
     width: auto;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 600px) {
+    .galleryImage {
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
   
 /*Style Scroll Div*/
 .scrollDiv {
-    background-color: #00473E;
-    border-radius: 20px;
-    max-height: 500px;
+    background-color: #DDEAE5;
+    border: 3px solid #00473e;
+    border-radius: 10px;
+    max-height: 375px;
     max-width: 500px;
     overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
   
 /*Style Scroll Div Images*/
 .scrollDiv img {
     width: auto;
-    height: 150px;
+    height: 175px;
     margin-right: auto;
     margin-left: auto;
     display: block;
@@ -224,7 +229,7 @@ a:hover {
   
 /*Style Scroll Div Paragraph Text*/
 .scrollDiv p {
-    color: #f2f7f5;
+    color: #00332c;
     text-align: center;
     font-family: "Schibsted Grotesk", sans-serif;
     margin-right: 5%;
@@ -248,8 +253,14 @@ a:hover {
     width: 45%;
     height: auto;
     align-items: center;
-    margin-right: auto;
+}
+
+.sideBySideElementRight {
     margin-left: auto;
+}
+
+.sideBySideElementLeft {
+    margin-right: auto;
 }
   
 /*Style Videos in Side By Side Elements*/
@@ -272,78 +283,11 @@ a:hover {
     .sideBySideElement {
         width: 100%;
     }
-}
 
-/*Style Project Sections*/
-.project {
-    height: auto;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*Style Project Image Subsections*/
-.projectImage {
-    width: 15%;
-    height: auto;
-    align-items: center;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-/*Style Project Images*/
-.projectImage img {
-    width: 75%;
-    height: auto;
-    border-radius: 5px;
-}
-
-/*Style Project Info Subsections*/
-.projectInfo {
-    width: 85%;
-    height: auto;
-    align-items: center;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-/*Style Projects to be Responsive*/
-@media screen and (max-width: 1200px) {
-    .projectImage {
-        width: 30%;
-    }
-
-    .projectInfo {
-        width: 70%;
-    }
-  
-    .projectImage img {
-        width: 75%;
-        height: auto;
+    .sideBySideElementLeft, .sideBySideElementRight {
         margin-right: auto;
         margin-left: auto;
         display: block;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .project {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-
-    .projectImage, .projectInfo {
-        width: 100%;
-    }
-  
-    .projectImage img {
-        width: 50%;
-        height: auto;
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
-        text-align: center;
     }
 }
 
@@ -354,6 +298,8 @@ a:hover {
     padding: 20px 0px;
     text-align: center;
     bottom: 0;
+    border-top: 0.5px solid #00473e;
+    margin-top: 10px;
 }
 
 /*Footer Copyright Text*/
@@ -376,4 +322,110 @@ a:hover {
 .footer i:hover {
     font-size: 30px; 
     color: #FA5246;
+}
+
+.divider {
+    border-bottom: 0.5px solid #00473e;
+    margin: 40px 0px;
+}
+
+.languagesAndTools {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-top: 10px;
+}
+
+/*Style Project Sections*/
+.project {
+    box-sizing: border-box;
+    height: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDEAE5;
+    border: 3px solid #00473E;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*Style Project Image Subsections*/
+.projectImage {
+    min-width: 15%;
+    height: auto;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    float: right;
+}
+
+/*Style Project Images*/
+.projectImage img {
+    width: 165px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+/*Style Project Info Subsections*/
+.projectInfo {
+    min-width: 85%;
+    height: auto;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    float: left;
+}
+
+.textOnly .projectInfo {
+    width: 100%;
+}
+
+.projectInfo p {
+    font-family: "Schibsted Grotesk", sans-serif;
+    color: #00332c;
+}
+
+.projectInfo .paragraphHeader {
+    font-family: "Schibsted Grotesk", sans-serif;
+    color: #00473E;
+    font-size: 22px;
+}
+
+/*Style Projects to be Responsive*/
+@media screen and (max-width: 800px) {
+    .project {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .projectImage, .projectInfo {
+        width: 100%;
+    }
+  
+    .projectImage img {
+        width: 50%;
+        height: auto;
+        margin: 20px;
+        margin-bottom: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        float: none;
+    }
+}
+
+.languagesAndTools p {
+    font-family: "Schibsted Grotesk", sans-serif;
+    background-color: #00473E;
+    color: #f2f7f5;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: auto;
+    font-size: 11px;
 }
