@@ -3,7 +3,7 @@ html {
     height: 100%;
     width: 100%;
     background-color: #f2f7f5;
-    color: #004643;
+    color: #00473e;
 }
   
 /*Style Everything*/
@@ -329,13 +329,6 @@ a:hover {
     margin: 40px 0px;
 }
 
-.languagesAndTools {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -5px;
-    margin-top: 10px;
-}
-
 /*Style Project Sections*/
 .project {
     box-sizing: border-box;
@@ -354,35 +347,40 @@ a:hover {
 
 /*Style Project Image Subsections*/
 .projectImage {
-    min-width: 15%;
+    width: 15%;
     height: auto;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
     float: right;
+    margin-left: 0px 20px;
 }
 
 /*Style Project Images*/
 .projectImage img {
-    width: 165px;
+    width: 100%;
     height: auto;
-    margin-left: 20px;
+    margin-left: 10px;
     border-radius: 5px;
     float: right;
+    box-sizing: border-box;
 }
 
 /*Style Project Info Subsections*/
 .projectInfo {
-    min-width: 85%;
+    width: 85%;
     height: auto;
     align-items: center;
     margin-right: auto;
     margin-left: auto;
     float: left;
+    padding-right: 5%;
+    box-sizing: border-box;
 }
 
 .textOnly .projectInfo {
     width: 100%;
+    padding-right: 0%;
 }
 
 .projectInfo p {
@@ -397,6 +395,16 @@ a:hover {
 }
 
 /*Style Projects to be Responsive*/
+@media screen and (max-width: 1000px) {
+    .projectImage {
+        width: 25%;
+    }
+
+    .projectInfo {
+        width: 75%;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .project {
         flex-wrap: wrap;
@@ -406,7 +414,11 @@ a:hover {
     .projectImage, .projectInfo {
         width: 100%;
     }
-  
+
+    .project-info {
+        padding-right: 0%;
+    }
+
     .projectImage img {
         width: 50%;
         height: auto;
@@ -417,6 +429,13 @@ a:hover {
         display: block;
         float: none;
     }
+}
+
+.languagesAndTools {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-top: 10px;
 }
 
 .languagesAndTools p {
