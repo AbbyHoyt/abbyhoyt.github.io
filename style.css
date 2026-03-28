@@ -432,6 +432,7 @@ a:hover {
     }
 }
 
+/*Style Project Languages and Tools*/
 .languagesAndTools {
     display: flex;
     flex-wrap: wrap;
