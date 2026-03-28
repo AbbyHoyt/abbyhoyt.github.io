@@ -18,6 +18,7 @@ html {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
+    max-width: 1300px;
 }
   
 /*Style Header Text*/
@@ -198,8 +199,8 @@ a:hover {
 @media screen and (max-width: 600px) {
     .galleryImage {
         margin: 10px;
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         object-fit: cover;
         object-position: center center;
     }
@@ -420,8 +421,8 @@ a:hover {
     }
 
     .projectImage img {
-        width: 50%;
-        height: auto;
+        height: 125px;
+        width: auto;
         margin: 20px;
         margin-bottom: 0px;
         margin-right: auto;
